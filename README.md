@@ -1,42 +1,32 @@
 # Centos7-KMS-Server
-Installation Steps
+# **Installation Steps**
 
-1- Download the Centos7 iso 
-
-2- Install the Centos7. I prefer to install Centos7 with Gnome GUI.
+1- Download the Centos7 iso.
+	2- Install the Centos7. I prefer to install Centos7 with Gnome GUI.
 
 3- Create a root connection and disable the firewall 
+	  - $ systemctl stop firewalld
+	  - $ systemctl disable firewalld
 
-3.1 - $ systemctl stop firewalld
+4 Create an install.sh file and copy the KMSScript into it. 
 
-3.2 - $ systemctl disable firewalld
+	- $ cd /home/
+	- $ nano install.sh
+~~copy the script into it and save it. ~~
 
-4- Create an install.sh file and copy the KMSScript into it. 
-
-4.1 - $ cd /home/
-
-4.2 - $ nano install.sh
-
-4.3 copy the script into it and save it. 
-
-4.3 - $ chmod 755 install.sh
-
-4.4 - $ ./install.sh
+	- $ chmod 755 install.sh
+	- $ ./install.sh
 
 
-Windows Activation 
+## Windows Activation 
 
 5 - Open the CMD as administrator
 
-5.1 - # slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+	# slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+	# slmgr /skms 192.168....
+	# slmgr /ato
+	# slmgr /dlv
 
-5.2 - # slmgr /skms 192.168....
+Note 1: This is at the **oprocs** in detail. 
 
-5.3 - # slmgr /ato
-
-5.4 - # slmgr /dlv
-
-Note 1: This is at the oprocs in detail. 
-
-Note 2: I am not the owner of the script file. 
-
+Note 2: I am **not** the **owner** of the *script* file. 
