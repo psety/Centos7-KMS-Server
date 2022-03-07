@@ -2,7 +2,8 @@
 # **Installation Steps**
 
 1- Download the Centos7 iso.
-	2- Install the Centos7. I prefer to install Centos7 with Gnome GUI.
+
+2- Install the Centos7. I prefer to install Centos7 with Gnome GUI.
 
 3- Create a root connection and disable the firewall 
 	  - $ systemctl stop firewalld
